@@ -1,0 +1,7 @@
+{
+    "breadcrumbs.enabled": true,
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.rulers": [80]
+}

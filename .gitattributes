@@ -1,0 +1,8 @@
+* text=auto
+
+LICENSE eol=lf
+
+*.bat eol=crlf
+*.cmd eol=crlf
+*.ps1 eol=lf
+*.sh eol=lf
