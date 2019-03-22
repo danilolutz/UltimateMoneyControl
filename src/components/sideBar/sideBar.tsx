@@ -1,11 +1,11 @@
 import {ipcRenderer} from 'electron';
 import * as React from 'react';
 
-interface ActivityBarState {
+interface SideBarState {
   isOpen: boolean;
 }
 
-export class ActivityBar extends React.Component<{}, ActivityBarState> {
+export class SideBar extends React.Component<{}, SideBarState> {
   constructor(props: any) {
     super(props);
     this.state = {isOpen: true};
@@ -14,14 +14,20 @@ export class ActivityBar extends React.Component<{}, ActivityBarState> {
   componentDidMount(): void {
     // When the document is rendered.
     const self = this;
-    ipcRenderer.on('toggle-activitybar', function() {
+    ipcRenderer.on('toggle-sidebar', function() {
       // ... change the state of this React component.
       self.setState({isOpen: !self.state.isOpen});
     });
   }
 
+  onClick(toggle: boolean): void {
+    this.setState({isOpen: toggle});
+  }
+
   render() {
     const isOpen = this.state.isOpen;
-    return <div style={isOpen ? {} : {display: 'none'}}>ActivityBar</div>;
+    return (
+      <div style={isOpen ? {} : {display: 'none'}}>SideBar</div>
+    );
   }
 }

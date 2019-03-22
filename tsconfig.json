@@ -20,7 +20,7 @@
     "jsx": "react"
   },
   "formatCodeOptions": {
-    "indentSize": 2,
-    "tabSize": 2
+    "indentSize": 4,
+    "tabSize": 4
   }
 }
