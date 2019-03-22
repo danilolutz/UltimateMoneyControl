@@ -49,7 +49,7 @@ Or by SSH:
 git clone git@github.com:danilolutz/UltimateMoneyControl.git
 ```
 
-Whatever you prefer. Clone the repo and start your work following this steps (aka gitflow):
+Whatever you prefer. Clone the repo and start your work following this steps (aka [gitflow](https://danielkummer.github.io/git-flow-cheatsheet/index.html)):
 
 1. :wrench: Create a new branch based on **develop**
 2. :white_check_mark: Name you branch how you prefer BUT **develop** or **master**
