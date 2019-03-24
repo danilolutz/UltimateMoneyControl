@@ -1,8 +1,9 @@
-import {app, BrowserWindow, Menu} from 'electron';
+import { app, BrowserWindow, Menu } from 'electron';
 import installExtension, {
     REACT_DEVELOPER_TOOLS,
 } from 'electron-devtools-installer';
-import {enableLiveReload} from 'electron-compile';
+import { enableLiveReload } from 'electron-compile';
+import { UMCWindow } from "./window/UMCWindow";
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -11,7 +12,7 @@ let mainWindow: Electron.BrowserWindow | null = null;
 const isDevMode = process.execPath.match(/[\\/]electron/);
 
 if (isDevMode) {
-    enableLiveReload({strategy: 'react-hmr'});
+    enableLiveReload({ strategy: 'react-hmr' });
 }
 
 const createWindow = async () => {
@@ -29,152 +30,8 @@ const createWindow = async () => {
         await installExtension(REACT_DEVELOPER_TOOLS);
         mainWindow.webContents.openDevTools();
     }
-    const template = [
-        {
-            label: 'File',
-            submenu: [
-                {
-                    label: 'Transactions',
-                    accelerator: 'CmdOrCtrl+Shift+t'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'Bank Account',
-                    accelerator: 'CmdOrCtrl+Shift+b'
-                },
-                {
-                    label: 'Categories',
-                    accelerator: 'CmdOrCtrl+Shift+c'
-                },
-                {
-                    label: 'Payees',
-                    accelerator: 'CmdOrCtrl+Shift+p'
-                },
-                {
-                    label: 'Currency',
-                    accelerator: 'CmdOrCtrl+Shift+u'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'Import *.CSV File'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'Exit',
-                    role: 'close'
-                },
-            ],
-        },
-        {
-            label: 'Edit',
-            submenu: [],
-        },
-        {
-            label: 'Reports',
-            submenu: [
-                {
-                    label: 'Cash Flow'
-                },
-                {
-                    label: 'Incomes vs Expenses'
-                },
-                {
-                    label: 'Where money goes'
-                },
-                {
-                    label: 'Where money comes'
-                },
-            ],
-        },
-        {
-            label: 'View',
-            submenu: [
-                {
-                    label: 'Toggle Activity Bar',
-                    type: 'checkbox',
-                    checked: true,
-                    click: function() {
-                        if (mainWindow) {
-                            mainWindow.webContents.send('toggle-activitybar');
-                        }
-                    },
-                },
-                {
-                    label: 'Toggle Side Bar',
-                    type: 'checkbox',
-                    checked: true,
-                    accelerator: 'CmdOrCtrl+b',
-                    click: function() {
-                        if (mainWindow) {
-                            mainWindow.webContents.send('toggle-sidebar');
-                        }
-                    },
-                },
-            ],
-        },
-        {
-            label: 'Help',
-            submenu: [
-                {
-                    label: 'Welcome',
-                    accelerator: 'CmdOrCtrl+Shift+w'
-                },
-                {
-                    label: 'Documentation'
-                },
-                {
-                    label: 'Tips and Tricks'
-                },
-                {
-                    label: 'Keyboard Shortcuts Reference'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'Join Us on Twitter'
-                },
-                {
-                    label: 'Report Issue'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'Check for Updates...'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'View License'
-                },
-                {
-                    label: 'Privacy Statement'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    role: 'toggleDevTools'
-                },
-                {
-                    type: 'separator'
-                },
-                {
-                    label: 'About'
-                }
-            ],
-        },
-    ];
 
-    const menu = Menu.buildFromTemplate(template);
+    const menu = Menu.buildFromTemplate(UMCWindow.createMenu(mainWindow));
     Menu.setApplicationMenu(menu);
 
     // Emitted when the window is closed.
