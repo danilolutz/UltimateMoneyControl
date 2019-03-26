@@ -2,13 +2,26 @@
 
 ## Overview
 
-_Must describe what for this app is._
+**Ultimate Money Control** is free, open-source, cross-platform, easy-to-use personal finance software. It really helps you to organize and keep tracks of your money. **Ultimate Money Control** intend to keep your money tracking very simple and have all basic financial tools.
 
 We follow the [Semantic Versioning](https://semver.org), so check the package compatibility before use it.
 
 ## :sunglasses: Get Started
 
-_Must describe how to install and use the app._
+### Download and install
+
+Click the link to download accordingly with your Operating System:
+
+- Linux (.deb)
+- MacOs
+- Windows
+
+### Start to use
+
+- Create an Account
+- Add Account Transactions
+
+Really simple, right!?
 
 ## :construction_worker: Contributing
 
