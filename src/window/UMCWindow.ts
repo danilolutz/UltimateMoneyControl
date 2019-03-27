@@ -33,7 +33,8 @@ export class UMCWindow {
                         type: 'separator'
                     },
                     {
-                        label: 'Import *.CSV File'
+                        label: 'Import *.CSV File',
+                        accelerator: 'CmdOrCtrl+Alt+i'
                     },
                     {
                         type: 'separator'
@@ -117,7 +118,10 @@ export class UMCWindow {
                         type: 'separator'
                     },
                     {
-                        label: 'Join Us on Twitter'
+                        label: 'Join Us on Twitter',
+                        click() {
+                            shell.openExternal('https://twitter.com/UMoneyControl');
+                        }
                     },
                     {
                         label: 'Report Issue',
