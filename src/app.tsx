@@ -15,7 +15,7 @@ const divStyle = {
   color: '#dddddd',
   display: 'flex',
   fontSize: '12px',
-  fontFamily: '"Droid Sans Mono",Inconsolata,"Courier New",monospace,"Droid Sans Fallback"',
+  fontFamily: '"Droid Sans Mono", Inconsolata, "Courier New", monospace, "Droid Sans Fallback"',
   flexDirection: 'row',
   flex: '1',
   height: '100%',
@@ -33,7 +33,7 @@ export class App extends React.Component<undefined, undefined> {
       <div style={rootStyle}>
         <div style={divStyle}>
           <ActivityBar />
-          <SideBar />
+          <SideBar title={'Accounts'} />
           <ContainerArea />
         </div>
       </div>
