@@ -1,5 +1,7 @@
 import { ipcRenderer } from 'electron';
 import * as React from 'react';
+import { SideBarActions } from '../sideBarActions/sideBarActions';
+import { SideBarAction } from '../sideBarActions/sideBarAction';
 
 interface SideBarState {
   isOpen: boolean;
@@ -24,51 +26,24 @@ export class SideBar extends React.Component<SideBarProps, SideBarState> {
     });
   }
 
-  onClick(toggle: boolean): void {
-    this.setState({ isOpen: toggle });
-  }
-
   render() {
     const props = this.props;
     const isOpen = this.state.isOpen;
-    const sideBarStyle = {
-      backgroundColor: '#252526',
-      color: '#ccc',
-      display: isOpen ? '' : 'none',
-      flex: '0 0 auto',
-      marginTop: '0',
-      paddingLeft: '0',
-      paddingTop: '0',
-      width: '300px'
-    };
 
-    const sideBarTitleStyle = {
-      backgroundColor: 'rgba(128, 128, 128, 0.2)',
-      height: '22px',
-      lineHeight: '22px',
-      marginTop: '0',
-      padding: '5px',
-
-      whiteSpace: 'nowrap',
-      textOverflow: 'ellipsis',
-      overflow: 'hidden',
-      fontSize: '11px',
-      WebkitMarginBefore: '0',
-      WebkitMarginAfter: '0'
-    };
-
-      // backgroundColor: '#252526',
-      // color: '#ccc',
-      // display: isOpen ? '' : 'none',
-      // flex: '0 0 auto',
-      // paddingLeft: '10px',
-      // width: '300px'
-    // };
+    let className = 'sidebar';
+    if (!isOpen) {
+      className += ' closed';
+    }
 
     return (
-      <div style={sideBarStyle}>
-        <h1 style={sideBarTitleStyle}>{props.title}</h1>
-        <div >
+      <div className={className}>
+        <div className='sidebar-header'>
+          <h1 className='sidebar-title'>{props.title}</h1>
+          <SideBarActions>
+              <SideBarAction title='New Bank Account' icon='new-bank-account' />
+          </SideBarActions>
+        </div>
+        <div>
           {props.children}
         </div>
       </div>

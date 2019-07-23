@@ -37,7 +37,6 @@ export class App extends React.Component<undefined, undefined> {
           <ContainerArea />
         </div>
       </div>
-
     );
   }
 }

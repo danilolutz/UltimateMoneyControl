@@ -58,6 +58,7 @@
     "@types/electron-devtools-installer": "^2.0.2",
     "@types/react": "^0.14.55",
     "@types/react-dom": "^0.14.20",
+    "classnames": "^2.2.6",
     "electron-compile": "^6.4.4",
     "electron-devtools-installer": "^2.1.0",
     "electron-squirrel-startup": "^1.0.0",
@@ -72,7 +73,9 @@
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.2.4",
     "electron-prebuilt-compile": "4.0.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.4",
     "tslint": "^5.1.0",
-    "typescript": "~2.2.2"
+    "typescript": "^3.5.3"
   }
 }

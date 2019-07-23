@@ -1,0 +1,58 @@
+.sidebar {
+    background-color: #252526;
+    color: #ccc;
+    flex: 0 0 auto;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+    width: 300px;
+}
+
+.closed {
+    display: none;
+}
+
+.sidebar .sidebar-header {
+    background-color: rgba(128, 128, 128, 0.2);
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-header .sidebar-title {
+    padding: 5px;
+    margin: 0;
+    font-size: 11px;
+}
+
+.sidebar .sidebar-header .sidebar-actions {
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+    padding: 5px;
+}
+
+.sidebar:hover .sidebar-header .sidebar-actions {
+    visibility: visible;
+}
+
+.sidebar .sidebar-header .sidebar-actions .sidebar-action {
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    width: 18px;
+}
+
+.new-bank-account {
+    background-image: url('data:image/svg+xml,<svg version="1.1" viewBox="0 0 10 10" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28,14H18V4c0-1.104-0.896-2-2-2s-2,0.896-2,2v10H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h10v10c0,1.104,0.896,2,2,2  s2-0.896,2-2V18h10c1.104,0,2-0.896,2-2S29.104,14,28,14z"/></svg>');
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+}
