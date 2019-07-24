@@ -1,5 +1,7 @@
 # Ultimate Money Control
 
+[![Gitter](https://badges.gitter.im/UltimateMoneyControl/community.svg)](https://gitter.im/UltimateMoneyControl/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ## Overview
 
 **Ultimate Money Control** is free, open-source, cross-platform, easy-to-use personal finance software. It really helps you to organize and keep tracks of your money. **Ultimate Money Control** intend to keep your money tracking very simple and have all basic financial tools.
