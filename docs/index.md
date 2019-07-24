@@ -2,10 +2,10 @@
 
 Your best personal money manager.
 
-## Recruiting
+## Recruitment
 
-We want more people working with us to create UMC, if you're interested
+We want you working with us to create the best personal money manager in the world, if you're interested you can talk with us or access the project repo below.
 
-Access: <a href="https://github.com/danilolutz/UltimateMoneycontrol">https://github.com/danilolutz/UltimateMoneycontrol</a>
+[![Gitter](https://badges.gitter.im/UltimateMoneyControl/community.svg)](https://gitter.im/UltimateMoneyControl/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) ![GitHub Repo](https://img.shields.io/badge/Github-Repo-blue.svg)
 
-Or you can chat with us on: [![Gitter](https://badges.gitter.im/UltimateMoneyControl/community.svg)](https://gitter.im/UltimateMoneyControl/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+Regards!
