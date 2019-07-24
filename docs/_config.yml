@@ -15,3 +15,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
+
+theme: jekyll-theme-cayman
