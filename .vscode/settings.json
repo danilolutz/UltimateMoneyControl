@@ -3,5 +3,8 @@
     "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": false,
-    "editor.rulers": [80]
+    "editor.rulers": [
+        80
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
