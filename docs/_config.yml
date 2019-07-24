@@ -1,0 +1,17 @@
+title: Ultimate Money Control
+description: Your best personal money manager.
+url: https://danilolutzgithub.io/UltimateMoneyControl
+
+author:
+  name: Danilo Lutz
+  picture: https://avatars0.githubusercontent.com/u/1561739
+  twitter: danilolutz
+
+exclude: [Gemfile, Gemfile.lock, LICENSE, README.md]
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
